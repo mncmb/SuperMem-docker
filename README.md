@@ -8,4 +8,10 @@ to build
 to run
 `docker run --rm -v "$PWD":/work -ti supermem bash`
 
-in there from `python3 winSuperMem.py -f memdump.mem -o output/ -tt 1`  syntax just changed to this `winSuperMem -f memdump.mem -o output/ -tt 1`
+In the container   syntax just changed from 
+
+`python3 winSuperMem.py -f memdump.mem -o output/ -tt 1` 
+
+to 
+
+`winSuperMem -f memdump.mem -o output/ -tt 1`
