@@ -16,7 +16,7 @@ RUN git clone https://github.com/CrowdStrike/SuperMem.git /app \
  && pip3 install -r requirements.txt \
  && chmod +x ./winSuperMem.py \
  && echo -e 'python3 /app/winSuperMem.py "$@"' > /usr/bin/winSuperMem \
- && chmod +x /usb/bin/winSuperMem \
+ && chmod +x /usr/bin/winSuperMem \
  && mkdir /work
 
 RUN wget https://s3.amazonaws.com/build-artifacts.floss.flare.fireeye.com/travis/linux/dist/evtxtract -O /usr/local/bin/evtxtract \
