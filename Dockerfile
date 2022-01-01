@@ -26,9 +26,8 @@ RUN git clone https://github.com/volatilityfoundation/volatility3.git /opt/vol3 
  && chmod +x /opt/vol3/vol.py \
  && ln -s /opt/vol3/vol.py /usr/bin/vol3
 
-RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py \
- && python ./get-pip.py \
- && pip install distorm3 pycrypto
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python - && pip install distorm3==3.4.2 pycrypto
+
 
 RUN git clone https://github.com/volatilityfoundation/volatility.git /tmp/vol2 \
  && cd /tmp/vol2 && python setup.py install \
